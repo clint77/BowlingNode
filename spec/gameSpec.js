@@ -21,4 +21,10 @@ describe('Gutter game', function() {
     expect(game.score()).toEqual(7);
   });
 
+  it('can play 3 frames and total the score', function() {
+    game.playFrame(4, 5);
+    game.playFrame(4, 5);
+    game.playFrame(4, 5);
+    expect(game.score()).toEqual(27);
+  });
 });
